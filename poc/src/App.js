@@ -1,59 +1,65 @@
 import React, { Component } from "react";
-import { Button, Icon, Label } from "semantic-ui-react";
+import ButtonsSample from "./ButtonsSample";
+import LabelsSample from "./LabelsSample";
+import ListsSample from "./ListsSample";
+import MenusSample from "./MenusSample";
+import FormsSample from "./FormsSample";
+import MessagesSample from "./MessagesSample";
+import TablesSample from "./TablesSample";
+import StepsSample from "./StepsSample";
+import CardsSample from "./CardsSample";
+import GridsSample from "./GridsSample";
+import { Menu , Segment} from "semantic-ui-react";
 
 class App extends Component {
+  state = { activeItem: "buttons" };
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+
   render() {
+    const { activeItem } = this.state;
+    const names = {
+      buttons: "buttons",
+      labels: "labels",
+      messages: "messages",
+      forms: "forms",
+      list: "lists",
+      menus: "menus",
+      tables: "tables",
+      steps: "steps",
+      cards: "cards",
+      grids: "grids"
+    };
+
+    const menuItems = Object.entries(names).map((it, index) => {
+      const name = it[1];
+      return (
+        <Menu.Item
+          key={index}
+          name={name}
+          active={activeItem === name}
+          onClick={this.handleItemClick}
+        />
+      );
+    });
     return (
       <div>
-        <h2>Buttons</h2>
-        <Button primary>primary</Button>
-        <Button secondary>secondary</Button>
-        <Button float>secondary</Button>
-        <br />
-        <br />
-        <Button animated>
-          <Button.Content visible>Next</Button.Content>
-          <Button.Content hidden>
-            <Icon name="arrow right" />
-          </Button.Content>
-        </Button>
-        <br />
-        <br />
-        <Button icon>
-          <Icon name="heart" />
-          Like
-        </Button>
-        <br />
-        <br />
-        <Button fluid>fluid</Button>
-        <br />
-        <Button icon>
-          <Icon name="cart arrow down" />
-        </Button>
-        <Button basic color="basic orange">
-          Orange
-        </Button>
-        <Button disabled>Disabled</Button>
-        <Button loading>Loading</Button>
-        <br />
-        <br />
-        Button groups :
-        <Button.Group>
-          <Button>One</Button>
-          <Button>Two</Button>
-          <Button>Three</Button>
-        </Button.Group>
-        <br />
-        <br />
-        <hr />
-        <h2>Labels</h2>
-        <Label>
-          <Icon name="mail" /> 23
-        </Label>
-        <br />
-        <br />
-        <input type="text" placeholder="First name" />
-        <Label pointing="left">Please enter a value</Label>
+        <h1>
+          The number of components and UI designs is AMAZING -
+          <a href="https://react.semantic-ui.com">check documentation here</a>
+        </h1>
+        <Segment inverted>
+          <Menu inverted pointing secondary>{menuItems}</Menu>
+        </Segment>
+        {activeItem === names.buttons ? <ButtonsSample /> : ""}
+        {activeItem === names.labels ? <LabelsSample /> : ""}
+        {activeItem === names.messages ? <MessagesSample /> : ""}
+        {activeItem === names.forms ? <FormsSample /> : ""}
+        {activeItem === names.list ? <ListsSample /> : ""}
+        {activeItem === names.menus ? <MenusSample /> : ""}
+        {activeItem === names.tables ? <TablesSample /> : ""}
+        {activeItem === names.steps ? <StepsSample /> : ""}
+        {activeItem === names.cards ? <CardsSample /> : ""}
+        {activeItem === names.grids ? <GridsSample /> : ""}
       </div>
     );
   }
