@@ -1,5 +1,5 @@
 <h2>Introduction</h2>
-This is a project i did during a videos i did on semantic ui
+This is a project i created during a videos i did on semantic ui react
 
 <h2>Videos</h2>
 <ui>
@@ -10,4 +10,4 @@ This is a project i did during a videos i did on semantic ui
 
 
 <h2>Presentation</h2>
-<a href="https://lnkd.in/dncDtCm">Slidshare</a>
+<a href="https://www.slideshare.net/nathankrasney/introduction-to-semantic-uireact">Slidshare</a>
