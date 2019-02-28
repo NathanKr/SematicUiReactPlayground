@@ -13,7 +13,7 @@ const TablesSample = () => {
             <h2>Table with sorting</h2>
             <p>click on header for sorting</p>
             <TableSorted/>
-            <hr/>
+            
         </div>
     );
 };

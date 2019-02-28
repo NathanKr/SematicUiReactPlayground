@@ -20,7 +20,7 @@ const GridWithRows = () => {
                 {columns}
                 </Grid.Row>
             </Grid>
-            <hr/>
+            
         </div>
     );
 };

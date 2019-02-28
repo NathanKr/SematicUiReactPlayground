@@ -4,7 +4,7 @@ import { Button, Icon} from "semantic-ui-react";
 const ButtonsSample = () => {
   return (
     <div>
-      <h1>Buttons</h1>
+      
       <Button primary>primary</Button>
       <Button secondary>secondary</Button>
       <Button float='true'>secondary</Button>

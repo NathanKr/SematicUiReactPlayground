@@ -4,7 +4,6 @@ import {  List ,Image} from "semantic-ui-react";
 const ListsSample = () => {
   return (
     <div>
-      <h1>Lists</h1>
       <h2>Simple list</h2>
       <List>
         <List.Item>Apples</List.Item>
@@ -59,7 +58,7 @@ const ListsSample = () => {
           </List.Content>
         </List.Item>
       </List>
-      <hr/>
+      
     </div>
   );
 };

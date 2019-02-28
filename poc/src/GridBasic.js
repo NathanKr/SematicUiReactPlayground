@@ -16,7 +16,7 @@ const GridBasic = () => {
             <Grid>
                 {columns}
             </Grid>
-            <hr/>
+           
         </div>
     );
 };

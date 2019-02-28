@@ -4,7 +4,6 @@ import {Step} from 'semantic-ui-react'
 const StepsSample = () => {
   return (
     <div>
-      <h1>Steps</h1>
       <Step.Group ordered>
         <Step completed>
           <Step.Content>
@@ -26,7 +25,6 @@ const StepsSample = () => {
           </Step.Content>
         </Step>
       </Step.Group>
-      <hr/>
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { Message } from "semantic-ui-react";
 const MessagesSample = () => {
   return (
     <div>
-      <h1>Messages</h1>
       <Message>
         <Message.Header>Changes in Service</Message.Header>
         <p>

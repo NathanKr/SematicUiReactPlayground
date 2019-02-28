@@ -1,14 +1,17 @@
 import React from 'react';
 import GridWithRows from './GridWithRows'
+import GridStretched from './GridStretched'
+import GridWithFloat from './GridWithFloat'
 
 import GridBasic from './GridBasic'
 
 const GridsSample = () => {
     return (
         <div>
-            <h1>Grids</h1>
             <GridBasic/>
             <GridWithRows/>
+            <GridStretched/>
+            <GridWithFloat/>
         </div>
     );
 };
