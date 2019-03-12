@@ -14,10 +14,11 @@ import ResponsiveSamples from "./ResponsiveSamples";
 import ConfirmsSamples from "./ConfirmsSamples";
 import SegmentsSample from './SegmentsSample'
 import TransitionsSample from './TransitionsSample'
+import DropdownsSample from './DropdownsSample'
 import { Menu, Segment } from "semantic-ui-react";
 
 class App extends Component {
-  state = { activeItem: "transition" };
+  state = { activeItem: "modal" };
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
@@ -37,7 +38,8 @@ class App extends Component {
       confirms: "confirm",
       responsive: "responsive",
       segments : "segment",
-      transitions : "transition"
+      transitions : "transition",
+      dropdowns : "dropdown"
     };
 
     const sortedNames = Object.entries(names).sort();
@@ -59,7 +61,7 @@ class App extends Component {
           <a href="https://react.semantic-ui.com">check documentation here</a>
         </h1>
         <Segment inverted>
-          <Menu inverted pointing secondary>
+          <Menu size="tiny" inverted pointing secondary>
             {menuItems}
           </Menu>
         </Segment>
@@ -78,6 +80,7 @@ class App extends Component {
         {activeItem === names.confirms ? <ConfirmsSamples /> : ""}
         {activeItem === names.segments ? <SegmentsSample/> : ""}
         {activeItem === names.transitions ? <TransitionsSample/> : ""}
+        {activeItem === names.dropdowns ? <DropdownsSample/> : ""}
       </div>
     );
   }
