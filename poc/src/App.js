@@ -15,15 +15,17 @@ import ConfirmsSamples from "./ConfirmsSamples";
 import SegmentsSample from './SegmentsSample'
 import TransitionsSample from './TransitionsSample'
 import DropdownsSample from './DropdownsSample'
+import CommentsSample from './CommentsSample'
 import { Menu, Segment } from "semantic-ui-react";
 
 class App extends Component {
-  state = { activeItem: "modal" };
+  state = { activeItem: "comment" };
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
     const { activeItem } = this.state;
     const names = {
+      comments : "comment",
       buttons: "button",
       labels: "label",
       messages: "message",
@@ -39,7 +41,7 @@ class App extends Component {
       responsive: "responsive",
       segments : "segment",
       transitions : "transition",
-      dropdowns : "dropdown"
+      dropdowns : "dropdown",
     };
 
     const sortedNames = Object.entries(names).sort();
@@ -81,6 +83,7 @@ class App extends Component {
         {activeItem === names.segments ? <SegmentsSample/> : ""}
         {activeItem === names.transitions ? <TransitionsSample/> : ""}
         {activeItem === names.dropdowns ? <DropdownsSample/> : ""}
+        {activeItem === names.comments ? <CommentsSample/> : ""}
       </div>
     );
   }
