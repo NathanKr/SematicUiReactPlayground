@@ -4,7 +4,6 @@ import FormBasic from './FormBasic';
 const FormsSample = () => {
     return (
         <div>
-            <h2>Basic form</h2>
             <FormBasic/>
         </div>
     );

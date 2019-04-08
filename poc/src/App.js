@@ -19,7 +19,7 @@ import CommentsSample from './CommentsSample'
 import { Menu, Segment } from "semantic-ui-react";
 
 class App extends Component {
-  state = { activeItem: "comment" };
+  state = { activeItem: "form" };
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
