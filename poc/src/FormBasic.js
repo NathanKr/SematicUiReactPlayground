@@ -13,16 +13,14 @@ const FormBasic = () => (
     style={{ backgroundColor: "red" ,height : '100vh'}}
     verticalAlign="middle"
   >
-    <Grid.Column style={{ maxWidth: 450 }}>
+    <Grid.Column style={{ maxWidth: '450px' }}>
       <Header as="h2">This is the form header</Header>
       <Form>
         <Segment stacked>
           <Form.Field>
-            <label>First Name</label>
             <input placeholder="First Name" />
           </Form.Field>
           <Form.Field>
-            <label>Last Name</label>
             <input placeholder="Last Name" />
           </Form.Field>
           <Form.Field>
