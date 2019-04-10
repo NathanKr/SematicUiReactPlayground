@@ -16,10 +16,11 @@ import SegmentsSample from './SegmentsSample'
 import TransitionsSample from './TransitionsSample'
 import DropdownsSample from './DropdownsSample'
 import CommentsSample from './CommentsSample'
+import LoadersSample from './LoadersSample' 
 import { Menu, Segment } from "semantic-ui-react";
 
 class App extends Component {
-  state = { activeItem: "form" };
+  state = { activeItem: "loader" };
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
@@ -42,6 +43,7 @@ class App extends Component {
       segments : "segment",
       transitions : "transition",
       dropdowns : "dropdown",
+      loaders : "loader"
     };
 
     const sortedNames = Object.entries(names).sort();
@@ -84,6 +86,7 @@ class App extends Component {
         {activeItem === names.transitions ? <TransitionsSample/> : ""}
         {activeItem === names.dropdowns ? <DropdownsSample/> : ""}
         {activeItem === names.comments ? <CommentsSample/> : ""}
+        {activeItem === names.loaders ? <LoadersSample/> : ""}
       </div>
     );
   }
